@@ -14,7 +14,7 @@ $ npm install --save merge-options
 ## Usage
 
 ```js
-const mergeOptions = require('merge-options');
+import mergeOptions from 'merge-options';
 
 mergeOptions({foo: 0}, {bar: 1}, {baz: 2}, {bar: 3})
 //=> {foo: 0, bar: 3, baz: 2}
@@ -29,7 +29,8 @@ mergeOptions({[Symbol.for('key')]: 0}, {[Symbol.for('key')]: 42})
 ### Usage with custom config
 
 ```js
-const mergeOptions = require('merge-options').bind({ignoreUndefined: true});
+import _mergeOptions from 'merge-options';
+const mergeOptions = _mergeOptions.bind({ignoreUndefined: true});
 
 mergeOptions({foo: 'bar'}, {foo: undefined})
 //=> {foo: 'bar'}

@@ -1,5 +1,5 @@
 import test from 'ava';
-import mergeOptions from '../index.js';
+import mergeOptions from '../index.mjs';
 
 const defineProtoProperty = (options, value) => Object.defineProperty(options, '__proto__', {
 	value,
